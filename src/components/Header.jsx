@@ -64,7 +64,7 @@ const Header = ({ navLinks }) => {
           <ul
             className={`${
               isMenuOpen ? 'flex' : 'hidden'
-            } md:flex flex-col md:flex-row absolute md:static top-full left-0 right-0 ${
+            } flex-col md:flex md:flex-row absolute md:static top-full left-0 right-0 ${
               isDark ? 'bg-zinc-900' : 'bg-white'
             } md:bg-transparent md:shadow-none shadow-lg p-4 md:p-0 list-none m-0 text-center text-xl transition-all duration-300`}
           >

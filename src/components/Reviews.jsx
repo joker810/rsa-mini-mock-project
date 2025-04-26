@@ -1,20 +1,24 @@
-import GoogleReviewsWidget from "google-reviews-widget";
 import { useTheme } from '../context/ThemeContext';
+import GoogleReviewsWidget from 'google-reviews-widget';
 
 const Reviews = () => {
   const { theme } = useTheme();
 
   return (
-    <div
-      className={`transition-colors duration-500 ease-in-out p-8 rounded-md shadow-lg ${
-        theme === 'dark' ? 'bg-zinc-900 text-orange' : 'bg-white text-black'
+    <section
+      className={`py-8 px-4 ${
+        theme === 'dark' ? 'bg-zinc-900 text-blue-400' : 'bg-white text-black'
       }`}
     >
-      <h2 className="text-2xl font-semibold mb-4 text-blue-400">
-        What Our Customers Say
-      </h2>
-      <GoogleReviewsWidget instanceId="LgyXTuNtBbRypqyGkxDF" />
-    </div>
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="text-3xl font-bold mb-10">
+          What Our Customers Say
+        </h2>
+        <div className="p-4 sm:py-6 md:py-8 text-xl">
+  <GoogleReviewsWidget instanceId="LgyXTuNtBbRypqyGkxDF" />
+</div>
+      </div>
+    </section>
   );
 };
 
